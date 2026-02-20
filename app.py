@@ -68,7 +68,7 @@ if uploaded_file is not None:
 
 
         # Show detection image
-        st.image(annotated, caption="Detection Result", use_container_width=True)
+        st.image(annotated, caption="Detection Result", use_column_width=True)
 
         # ---------------- RESULT PANEL ----------------
         st.subheader("📊 Prediction Result")
