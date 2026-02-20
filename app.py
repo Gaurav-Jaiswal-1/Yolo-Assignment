@@ -12,15 +12,15 @@ st.markdown("Detect whether a plastic bottle is **GOOD** or **BAD** using YOLO")
 # ---------------- MODEL SELECTOR ----------------
 model_option = st.selectbox(
     "Select Model Version",
-    ("Augmented Model", "Non-Augmented Model")
+    ("Non-Augmented Model","Augmented Model")
 )
 
 # ---------------- LOAD MODEL ----------------
 try:
-    if model_option == "Augmented Model":
-        model = YOLO(r"E:\Projects\Yolo\models\aug_model\best.pt")
-    else:
+    if model_option == "Non-Augmented Model":
         model = YOLO(r"E:\Projects\Yolo\models\yolov8n\best.pt")
+    else:
+        model = YOLO(r"E:\Projects\Yolo\models\aug_model\best.pt")
 
     st.success("✅ Model loaded successfully")
 
