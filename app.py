@@ -18,9 +18,9 @@ model_option = st.selectbox(
 # ---------------- LOAD MODEL ----------------
 try:
     if model_option == "Non-Augmented Model":
-        model = YOLO(r"models\yolov8n\best.pt")
+        model = YOLO("models/yolov8n/best.pt")
     else:
-        model = YOLO(r"models\aug_model\best.pt")
+        model = YOLO("models/aug_model/best.pt")
 
     st.success("✅ Model loaded successfully")
 
