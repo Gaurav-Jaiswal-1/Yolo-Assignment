@@ -64,7 +64,8 @@ if uploaded_file is not None:
         conf = float(box.conf)
         label = results[0].names[cls]
 
-        annotated = results[0].plot()
+        annotated = results[0].plot(pil=True)
+
 
         # Show detection image
         st.image(annotated, caption="Detection Result", use_container_width=True)
