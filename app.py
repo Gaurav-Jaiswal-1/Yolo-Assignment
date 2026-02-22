@@ -11,7 +11,7 @@ st.markdown("Classify whether a plastic bottle is **GOOD** or **BAD**")
 
 # ---------------- LOAD MODEL ----------------
 try:
-    model = YOLO(r"E:/Projects/Yolo/models/yolov8_cls/best.pt")  # 🔁 change path if needed
+    model = YOLO(r"models/yolov8_cls/best.pt")  # 🔁 change path if needed
     st.success("✅ Model loaded successfully")
 
 except Exception as e:
